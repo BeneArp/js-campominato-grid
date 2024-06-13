@@ -11,6 +11,14 @@ const bottonePerGiocare = document.getElementById("bottone-gioco");
 const containerGriglia = document.querySelector(".row");
 
 
+
+// CICLO
+// creazione griglia
+
+
+
+
+
 // EVENTO CLICK SUL BOTTONE PER INIZIARE LA PARTITA
 bottonePerGiocare.addEventListener("click",
     function(){
@@ -20,3 +28,18 @@ bottonePerGiocare.addEventListener("click",
         containerGriglia.classList.remove("invisible");
     }
 )
+
+
+
+
+// FUNZIONI
+function addHtmlElementWithClass (tag, elementClass){
+    // creo un elemento
+    const elemento = document.createElement(tag);
+    // gli aggiugo una classe
+    elemento.classList.add(elementClass);
+
+    console.log(elemento);
+
+    return elemento;
+}
