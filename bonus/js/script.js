@@ -53,14 +53,14 @@ bottonePerGiocare.addEventListener("click",
 
         if(sceltaUtente === "facile"){
             // crezione griglia con funzione
-            createGrid(1, 100, containerGriglia);
+            createGrid(1, 100, "box-facile", containerGriglia);
 
         }else if(sceltaUtente === "medio"){
-            createGrid(1, 81, containerGriglia);
+            createGrid(1, 81, "box-medio", containerGriglia);
 
         }else{
             // crezione griglia con funzione
-            createGrid(1, 49, containerGriglia)
+            createGrid(1, 49, "box-difficle", containerGriglia)
         }
         
 
@@ -83,10 +83,11 @@ function addHtmlElementWithClass (tag, elementClass){
 }
 
 // funzione creazione girglia
-  function createGrid (min, max, contenitoreElementi){
+  function createGrid (min, max, classeScelta, contenitoreElementi){
 
     for(let i = min; i <= max; i++){
         const divBox = addHtmlElementWithClass("div", "box");
+        divBox.classList.add(classeScelta)
 
         divBox.append(i);
      
