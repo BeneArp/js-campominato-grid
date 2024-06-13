@@ -18,6 +18,11 @@ for (let i = 1; i <= 100; i++){
     
     // creo i div con la classe associata usando la funzione
     const divBox = addHtmlElementWithClass("div", "box");
+    divBox.addEventListener("click",
+        function(){
+            divBox.classList.add("active");
+        }
+    )
 
     // inserisco i numeri progressivi nei div
     divBox.append(i);
