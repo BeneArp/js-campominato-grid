@@ -18,14 +18,17 @@ for (let i = 1; i <= 100; i++){
     
     // creo i div con la classe associata usando la funzione
     const divBox = addHtmlElementWithClass("div", "box");
-    divBox.addEventListener("click",
-        function(){
-            divBox.classList.add("active");
-        }
-    )
 
     // inserisco i numeri progressivi nei div
     divBox.append(i);
+
+    // aggiungo l'evento al click di ogni div
+    divBox.addEventListener("click",
+        function(){
+            divBox.classList.add("active");
+            console.log(i);
+        }
+    )
 
     // inserisco i div con i numeri nel dom
     containerGriglia.append(divBox);
