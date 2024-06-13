@@ -63,7 +63,6 @@ bottonePerGiocare.addEventListener("click",
             createGrid(1, 49, "box-difficle", containerGriglia)
         }
         
-
     }
 )
 
