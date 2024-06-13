@@ -14,7 +14,9 @@ const containerGriglia = document.querySelector(".row");
 
 // CICLO
 // creazione griglia
-
+for (let i = 0; i < 100; i++){
+    
+}
 
 
 
@@ -33,6 +35,8 @@ bottonePerGiocare.addEventListener("click",
 
 
 // FUNZIONI
+
+// crea un elemento html con una classe associata
 function addHtmlElementWithClass (tag, elementClass){
     // creo un elemento
     const elemento = document.createElement(tag);
@@ -43,3 +47,12 @@ function addHtmlElementWithClass (tag, elementClass){
 
     return elemento;
 }
+
+// crea un numero che aumenta prograssivamente
+function generateProgressiveNumber (min, max){
+    for(let i = min; i <= max; i++){
+        let valore = i;
+    
+        console.log(valore);
+    }
+}    
