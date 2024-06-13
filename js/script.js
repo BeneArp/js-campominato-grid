@@ -14,26 +14,31 @@ const containerGriglia = document.querySelector(".row");
 
 // CICLO
 // creazione griglia
-for (let i = 1; i <= 100; i++){
+// for (let i = 1; i <= 100; i++){
     
-    // creo i div con la classe associata usando la funzione
-    const divBox = addHtmlElementWithClass("div", "box");
+//     // creo i div con la classe associata usando la funzione
+//     const divBox = addHtmlElementWithClass("div", "box");
 
-    // inserisco i numeri progressivi nei div
-    divBox.append(i);
+//     // inserisco i numeri progressivi nei div
+//     divBox.append(i);
 
-    // aggiungo l'evento al click di ogni div
-    divBox.addEventListener("click",
-        function(){
-            divBox.classList.add("active");
-            console.log(i);
-        }
-    )
+//     // aggiungo l'evento al click di ogni div
+//     divBox.addEventListener("click",
+//         function(){
+//             divBox.classList.add("active");
+//             console.log(i);
+//         }
+//     )
 
-    // inserisco i div con i numeri nel dom
-    containerGriglia.append(divBox);
+//     // inserisco i div con i numeri nel dom
+//     containerGriglia.append(divBox);
 
-}
+// }
+
+
+
+// crezione griglia con funzione
+createGrid(1, 100, containerGriglia)
 
 
 
@@ -62,4 +67,24 @@ function addHtmlElementWithClass (tag, elementClass){
 
     return elemento;
 }
-  
+
+// funzione creazione girglia
+  function createGrid (min, max, contenitoreElementi){
+
+    for(let i = min; i <= max; i++){
+        const divBox = addHtmlElementWithClass("div", "box");
+
+        divBox.append(i);
+     
+        divBox.addEventListener("click",
+            function(){
+                divBox.classList.add("active");
+                console.log(i);
+            }
+        )
+
+        contenitoreElementi.append(divBox);
+
+       }
+     return contenitoreElementi;
+  }
