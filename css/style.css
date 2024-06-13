@@ -1,5 +1,35 @@
+/* azzeramento parametri */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+/* generali */
+body{
+    background-color: rgb(1 22 39);
+}
+
+/* main */
+.container{
+    width: 900px;
+    height: 900px;
+    margin: 15em auto;
+    border: 3px solid white;
+}
+
+/* classe per display flex */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* classe generica div */
+.box{
+    width: 10%;
+    border: 4px solid white;
+}
+
+/* classe div cliccato */
+.active{
+    background-color: rgb(127 255 212);
 }
