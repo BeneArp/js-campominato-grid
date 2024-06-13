@@ -9,3 +9,14 @@
 // RIFERIMENTI DAL DOM
 const bottonePerGiocare = document.getElementById("bottone-gioco");
 const containerGriglia = document.querySelector(".row");
+
+
+// EVENTO CLICK SUL BOTTONE PER INIZIARE LA PARTITA
+bottonePerGiocare.addEventListener("click",
+    function(){
+        // aggiungo la classe display non al bottone
+        bottonePerGiocare.classList.add("invisible");
+        // rimuovo la classe display none dalla griglia
+        containerGriglia.classList.remove("invisible");
+    }
+)
