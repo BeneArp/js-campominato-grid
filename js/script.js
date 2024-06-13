@@ -16,6 +16,15 @@ const containerGriglia = document.querySelector(".row");
 // creazione griglia
 for (let i = 0; i < 100; i++){
     
+    // creo i div con la classe associata usando la funzione
+    const divBox = addHtmlElementWithClass("div", "box");
+    
+    // inserisco i numeri progressivi nei div
+    divBox.append(generateProgressiveNumber(1, 100));
+
+    // inserisco i div con i numeri nel dom
+    containerGriglia.append(divBox);
+
 }
 
 
@@ -43,8 +52,6 @@ function addHtmlElementWithClass (tag, elementClass){
     // gli aggiugo una classe
     elemento.classList.add(elementClass);
 
-    console.log(elemento);
-
     return elemento;
 }
 
@@ -52,7 +59,7 @@ function addHtmlElementWithClass (tag, elementClass){
 function generateProgressiveNumber (min, max){
     for(let i = min; i <= max; i++){
         let valore = i;
-    
-        console.log(valore);
+
+        return valore;
     }
 }    
