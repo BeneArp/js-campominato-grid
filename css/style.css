@@ -22,13 +22,17 @@ body{
 .row{
     display: flex;
     flex-wrap: wrap;
-    display: none;
 }
 
 /* classe generica div */
 .box{
     width: 10%;
     border: 4px solid white;
+}
+
+/* classe per nascondere contenuto dalla pagina */
+.invisible{
+    display: none;
 }
 
 /* classe div cliccato */

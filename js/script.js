@@ -7,3 +7,5 @@
 
 
 // RIFERIMENTI DAL DOM
+const bottonePerGiocare = document.getElementById("bottone-gioco");
+const containerGriglia = document.querySelector(".row");
