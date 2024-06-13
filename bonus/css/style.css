@@ -26,10 +26,21 @@ body{
 
 /* classe generica div */
 .box{
-    width: 10%;
     border: 4px solid white;
     color: white;
     text-align: center;
+}
+
+.box-facile{
+    width: 10%;
+}
+
+.box-medio{
+    width: calc(100% / 9);
+}
+
+.box-difficle{
+    width: calc(100% / 7);
 }
 
 /* classe per nascondere contenuto dalla pagina */

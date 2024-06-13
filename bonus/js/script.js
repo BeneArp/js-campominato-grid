@@ -11,7 +11,6 @@ const bottonePerGiocare = document.getElementById("bottone-gioco");
 const containerGriglia = document.querySelector(".row");
 const selettore = document.getElementById("livello");
 
-
 // CICLO
 // creazione griglia
 // for (let i = 1; i <= 100; i++){
@@ -37,10 +36,6 @@ const selettore = document.getElementById("livello");
 
 
 
-// crezione griglia con funzione
-createGrid(1, 100, containerGriglia)
-
-
 
 
 // EVENTO CLICK SUL BOTTONE PER INIZIARE LA PARTITA
@@ -52,6 +47,23 @@ bottonePerGiocare.addEventListener("click",
         selettore.classList.add("invisible");
         // rimuovo la classe display none dalla griglia
         containerGriglia.classList.remove("invisible");
+        // valore livello di difficoltà scelto
+        const sceltaUtente = selettore.value;
+        console.log(sceltaUtente);
+
+        if(sceltaUtente === "facile"){
+            // crezione griglia con funzione
+            createGrid(1, 100, containerGriglia);
+
+        }else if(sceltaUtente === "medio"){
+            createGrid(1, 81, containerGriglia);
+
+        }else{
+            // crezione griglia con funzione
+            createGrid(1, 49, containerGriglia)
+        }
+        
+
     }
 )
 
