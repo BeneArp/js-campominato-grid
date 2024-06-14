@@ -38,7 +38,7 @@ const selettore = document.getElementById("livello");
 
 
 
-// EVENTO CLICK SUL BOTTONE PER INIZIARE LA PARTITA
+// EVENTO CLICK SUL BOTTONE
 bottonePerGiocare.addEventListener("click",
     function(){
         // aggiungo la classe display non al bottone
@@ -47,20 +47,21 @@ bottonePerGiocare.addEventListener("click",
         selettore.classList.add("invisible");
         // rimuovo la classe display none dalla griglia
         containerGriglia.classList.remove("invisible");
+        
         // valore livello di difficoltà scelto
         const sceltaUtente = selettore.value;
         console.log(sceltaUtente);
 
         if(sceltaUtente === "facile"){
             // crezione griglia con funzione
-            createGrid(1, 100, "box-facile", containerGriglia);
+            createGrid(1, 100, "div", "box", "box-facile", containerGriglia);
 
         }else if(sceltaUtente === "medio"){
-            createGrid(1, 81, "box-medio", containerGriglia);
+            createGrid(1, 81, "div", "box", "box-medio", containerGriglia);
 
         }else{
             // crezione griglia con funzione
-            createGrid(1, 49, "box-difficle", containerGriglia)
+            createGrid(1, 49, "div", "box", "box-difficle", containerGriglia)
         }
         
     }
@@ -82,10 +83,10 @@ function addHtmlElementWithClass (tag, elementClass){
 }
 
 // funzione creazione girglia
-  function createGrid (min, max, classeScelta, contenitoreElementi){
+  function createGrid (min, max, tag, defaultClass, classeScelta, contenitoreElementi){
 
     for(let i = min; i <= max; i++){
-        const divBox = addHtmlElementWithClass("div", "box");
+        const divBox = addHtmlElementWithClass(tag, defaultClass);
         divBox.classList.add(classeScelta)
 
         divBox.append(i);
